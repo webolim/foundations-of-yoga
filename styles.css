@@ -82,6 +82,7 @@ font-weight: 900;
 font-size: 0.9rem;
 color: var(--primary-color);
 transition: transform 0.4s ease, color 0.3s ease;
+padding: 1rem;
 }
 
 .accordion:hover::after {
@@ -92,6 +93,7 @@ color: var(--primary-hover-color);
 transform: rotate(180deg);
 color: var(--panel-background-color);
 }
+
 
 .panel {
 padding: 0;
