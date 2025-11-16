@@ -70,7 +70,8 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 .accordion.active {
 background-color: var(--primary-color);
 color: var(--panel-background-color);
-border-color: var(--primary-color);
+border: 1px solid var(--primary-hover-color);
+border-bottom: none;
 border-bottom-left-radius: 0;
 border-bottom-right-radius: 0;
 box-shadow: 0 6px 12px var(--shadow-color);
@@ -107,6 +108,11 @@ color: var(--panel-background-color);
 
 .question-text {
   flex-grow: 1;
+}
+
+.accordion.active + .panel {
+  border: 1px solid var(--primary-hover-color);
+  border-top: none;
 }
 
 
