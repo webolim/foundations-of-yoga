@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 'questions-15marks-container', url: 'questions_15marks.json' }
     ];
 
+    let questionCounter = 1;
     const fetchPromises = containers.map(container => fetch(container.url).then(response => response.json()));
 
     Promise.all(fetchPromises)
@@ -14,7 +15,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 data.forEach(item => {
                     const button = document.createElement('button');
                     button.className = 'accordion';
-                    button.innerHTML = item.question;
+
+                    const questionNumber = document.createElement('span');
+                    questionNumber.className = 'question-number';
+                    questionNumber.textContent = `${questionCounter}.`;
+                    button.appendChild(questionNumber);
+
+                    const questionText = document.createElement('span');
+                    questionText.className = 'question-text';
+                    questionText.textContent = item.question;
+                    button.appendChild(questionText);
+
+                    questionCounter++;
 
                     const panel = document.createElement('div');
                     panel.className = 'panel';

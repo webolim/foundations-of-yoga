@@ -1,12 +1,12 @@
 :root {
---primary-color: #4285F4;
---primary-hover-color: #669df6;
+--primary-color: #5610b9;
+--primary-hover-color: #7928d8;
 --background-color: #f1f3f4;
 --panel-background-color: #ffffff;
 --text-color: #3c4043;
 --heading-color: #202124;
 --border-color: #dfe1e5;
---shadow-color: rgba(0, 0, 0, 0.1);
+--shadow-color: rgba(86, 16, 185, 0.15);
 }
 
 
@@ -92,6 +92,16 @@ color: var(--primary-hover-color);
 .accordion.active::after {
 transform: rotate(180deg);
 color: var(--panel-background-color);
+}
+
+.question-number {
+  color: var(--primary-color);
+  padding-right: 1rem;
+  font-weight: 900;
+}
+
+.question-text {
+  flex-grow: 1;
 }
 
 
