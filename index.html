@@ -2,7 +2,24 @@
 <!DOCTYPE html>
 <!-- saved from url=(0134)https://gistcdn.githack.com/aperture22/915f0d4dd16f2264a7e78fa1b19ccf35/raw/c89e412302de9232fec28d0e81ce8d8305ad199d/yoga-answers.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Replace or add the following inside <head> -->
+<!-- Load Google font correctly (example) -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
+<!-- Load Font Awesome from CDN (ensures font-family "Font Awesome 5 Free" and webfonts are available) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dN6m4Y1kqz0y9Xy7e3u0x6q1fXQpG6Z3n5x1Dwhb0x1V3oGQ3k7K6E1fA9oGqg7V6b8Z9qzD6eY8l5c3X8zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+/* ensure the pseudo-element uses the solid weight for Font Awesome 5 Free */
+.accordion::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f078"; /* chevron-down */
+  font-weight: 900; /* required for solid icons in FA5 */
+  font-size: 0.9rem;
+  transition: transform 0.4s ease, color 0.3s ease;
+  color: var(--primary-color);
+}
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Foundations of Yoga - Past Paper Questions and Answers</title>
 <link rel="preconnect" href="https://fonts.googleapis.com/">
