@@ -1,20 +1,20 @@
 :root {
---primary-color: #2980b9;
---primary-hover-color: #3498db;
---background-color: #f8f9fa;
+--primary-color: #4285F4;
+--primary-hover-color: #669df6;
+--background-color: #f1f3f4;
 --panel-background-color: #ffffff;
---text-color: #34495e;
---heading-color: #2c3e50;
---border-color: #ecf0f1;
---shadow-color: rgba(0, 0, 0, 0.08);
+--text-color: #3c4043;
+--heading-color: #202124;
+--border-color: #dfe1e5;
+--shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 
 body {
-font-family: 'Lato', sans-serif;
+font-family: 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
 background-color: var(--background-color);
 color: var(--text-color);
-line-height: 1.7;
+line-height: 1.6;
 margin: 0;
 padding: 2rem;
 }
@@ -24,17 +24,22 @@ max-width: 900px;
 margin: 0 auto;
 }
 
-h2, h3 {
+h2 {
 color: var(--heading-color);
-border-bottom: 2px solid var(--primary-color);
-padding-bottom: 0.75rem;
+font-size: 1.75rem;
+font-weight: 500;
+border-bottom: 1px solid var(--border-color);
+padding-bottom: 0.5rem;
 margin-bottom: 1.5rem;
 }
 
 h3 {
-border-bottom-style: solid;
-border-bottom-width: 1px;
-border-color: var(--border-color);
+color: var(--heading-color);
+font-size: 1.3rem;
+font-weight: 500;
+border-bottom: none;
+margin-top: 2rem;
+margin-bottom: 1rem;
 }
 
 .accordion {
@@ -43,24 +48,23 @@ color: var(--text-color);
 cursor: pointer;
 padding: 1rem 1.5rem;
 width: 100%;
-border: 1px solid var(--border-color);
+border: none;
 border-radius: 8px;
 text-align: left;
 outline: none;
 font-size: 1rem;
-font-weight: 700;
+font-weight: 500;
 transition: all 0.3s ease;
 margin-bottom: 0.5rem;
 display: flex;
 justify-content: space-between;
 align-items: center;
-box-shadow: 0 2px 5px var(--shadow-color);
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .accordion:hover {
-border-color: var(--primary-hover-color);
-transform: translateY(-2px);
-box-shadow: 0 4px 12px var(--shadow-color);
+background-color: #f8f9fa;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .accordion.active {
@@ -94,14 +98,12 @@ padding: 0;
 background-color: var(--panel-background-color);
 max-height: 0;
 overflow: hidden;
-transition: max-height 0.4s ease-in-out;
-border: 1px solid var(--border-color);
-border-top: none;
+transition: max-height 0.2s ease-out;
 border-bottom-left-radius: 8px;
 border-bottom-right-radius: 8px;
-margin-top: -0.5rem; /* Connects panel to the active accordion */
+margin-top: -0.5rem;
 margin-bottom: 0.5rem;
-box-shadow: 0 4px 8px var(--shadow-color);
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .panel-content {
